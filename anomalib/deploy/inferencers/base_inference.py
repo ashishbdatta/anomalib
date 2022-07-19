@@ -98,6 +98,8 @@ class Inferencer(ABC):
         meta_data["image_shape"] = image_arr.shape[:2]
 
         processed_image = self.pre_process(image_arr)
+        # ORT only runs on contiguous tensors
+        processed_image = processed_image.contiguous()
         predictions = self.forward(processed_image)
         anomaly_map, pred_scores = self.post_process(predictions, meta_data=meta_data)
 

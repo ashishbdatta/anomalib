@@ -29,6 +29,9 @@ from anomalib.models.components import AnomalyModule
 from anomalib.pre_processing import PreProcessor
 
 from .base_inference import Inferencer
+from torch_ort import ORTInferenceModule
+import torch
+from onnxruntime.training.ortmodule.debug_options import DebugOptions, LogLevel
 
 
 class TorchInferencer(Inferencer):
@@ -84,6 +87,7 @@ class TorchInferencer(Inferencer):
         """
         model = get_model(self.config)
         model.load_state_dict(torch.load(path)["state_dict"])
+        model = ORTInferenceModule(model.model)
         model.eval()
         return model
 

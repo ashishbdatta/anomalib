@@ -91,6 +91,7 @@ class FeatureExtractor(nn.Module):
         Returns:
             Feature map extracted from the CNN
         """
-        self._features = {layer: torch.empty(0) for layer in self.layers}
+        #self._features = {layer: torch.empty(0) for layer in self.layers}
+        self._features = {"layer1": torch.rand((1,64,64,64)), "layer2": torch.rand((1,128,32,32)), "layer3": torch.rand((1, 256,16,16))}
         _ = self.backbone(input_tensor)
         return self._features

@@ -296,6 +296,10 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License 
 | DFKDE         | ResNet-18          |   0.872   |   0.864   |   0.844   |   0.854   |   0.960   |   0.898   |   0.942   |   0.793   |   0.908   |   0.827   |   0.894   |   0.916   |   0.859   |   0.853    |   0.756    |   0.916   |
 | GANomaly      |                    |   0.834   |   0.864   |   0.844   |   0.852   |   0.836   |   0.863   |   0.863   |   0.760   |   0.905   |   0.777   |   0.894   |   0.916   |   0.853   |   0.833    |   0.571    |   0.881   |
 
+## Contributing
+
+You are more than welcome to contribute to Anomalib. Please refer to our [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 ## Reference
 If you use this library and love it, use this to cite it 🤗
 ```
